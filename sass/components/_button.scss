@@ -1,0 +1,72 @@
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all .2s;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    -webkit-transform: translateY(-0.3rem);
+    -ms-transform: translateY(-0.3rem);
+    -o-transform: translateY(-0.3rem);
+    transform: translateY(-0.3rem);
+    -webkit-box-shadow: 0 1rem 2rem rgba($color-black,0.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+
+    &::after {
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
+      -ms-transform: scaleX(1.4) scaleY(1.6);
+      -o-transform: scaleX(1.4) scaleY(1.6);
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    -webkit-transform: translateY(-0.1rem);
+    -ms-transform: translateY(-0.1rem);
+    -o-transform: translateY(-0.1rem);
+    transform: translateY(-0.1rem);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba($color-black,0.2);
+    box-shadow: 0 0.5rem 1rem rgba($color-black,0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  &--white {
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--animated {
+    -webkit-animation: moveInBottom .5s ease-out .75s;
+    -o-animation: moveInBottom .5s ease-out .75s;
+    animation: moveInBottom .5s ease-out .75s;
+    -webkit-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+  }
+}
