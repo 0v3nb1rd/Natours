@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Nazzarik/Natours#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "node-sass": "^4.9.0"
   }
 }
