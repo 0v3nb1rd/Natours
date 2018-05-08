@@ -1,4 +1,6 @@
 .btn {
+
+  &,
   &:link,
   &:visited {
     position: relative;
@@ -9,6 +11,10 @@
     border-radius: 10rem;
     transition: all .2s;
     font-size: $default-font;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -28,7 +34,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     -webkit-transform: translateY(-0.1px);
     -ms-transform: translateY(-0.1px);
     -o-transform: translateY(-0.1px);
